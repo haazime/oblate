@@ -1,5 +1,5 @@
-require "oblate/version"
+require 'oblate/version'
+require 'oblate/service'
 
 module Oblate
-  # Your code goes here...
 end
