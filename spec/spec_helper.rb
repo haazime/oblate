@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "oblate"
 
-$LOAD_PATH << File.expand_path('../app/services', __FILE__)
+require_relative 'app'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

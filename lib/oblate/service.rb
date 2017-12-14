@@ -1,5 +1,9 @@
+require 'oblate/result'
+
 module Oblate
   class Service
+    include Result
+
     class << self
       private
 
