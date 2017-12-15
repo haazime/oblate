@@ -28,4 +28,18 @@ RSpec.describe Oblate::Service do
       end
     end
   end
+
+  describe 'failed' do
+    it do
+      allow(params).to receive(:valid?) { false }
+
+      service = service_class.new(model: Article)
+      result = service.post(user, params)
+
+      aggregate_failures do
+        expect(result).to_not be_succeeded
+        expect(result.params).to eq(params)
+      end
+    end
+  end
 end

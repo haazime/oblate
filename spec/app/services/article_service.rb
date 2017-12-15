@@ -5,6 +5,8 @@ class ArticleService < Oblate::Service
   end
 
   def post(user, params)
+    return failure(params: params) unless params.valid?
+
     article = Article.create!(params)
     success(article: article)
   end
