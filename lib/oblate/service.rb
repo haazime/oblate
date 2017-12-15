@@ -2,7 +2,12 @@ require 'oblate/result'
 
 module Oblate
   class Service
-    include Result
+    include Oblate::Result
+
+    if defined?(::ActiveRecord)
+      require 'oblate/persistence'
+      include Oblate::Persistence
+    end
 
     class << self
       private
