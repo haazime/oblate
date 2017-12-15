@@ -18,6 +18,10 @@ module Oblate
       def succeeded?
         true
       end
+
+      def failed?
+        false
+      end
     end
   end
 
@@ -26,6 +30,10 @@ module Oblate
 
       def succeeded?
         false
+      end
+
+      def failed?
+        true
       end
     end
   end
